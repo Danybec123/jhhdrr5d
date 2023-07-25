@@ -1,6 +1,6 @@
 // Crea una referencia para el elemento canvas
 canvas=document.getElementById("myCanvas")
-ctx=canvas.getcontext("2d")
+ctx=canvas.getContext("2d")
 
 
 img_width = 300;
@@ -30,21 +30,22 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
-		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
+		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90)){
+			
 		alphabetkey();
 		document.getElementById("d1").innerHTML="You pressed alphabet key"
 		console.log("alphabetkey")
-	
+		}
 	else {
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
 	}
 }
 
-function aplhabetkey()
+function alphabetkey()
 {
-	img_image="main(4).png"
-
+	img_image="main (4).png"
+add()
 }
 function numberkey()
 {
@@ -59,6 +60,6 @@ function specialkey()
 }
 function otherkey()
 {
-	img_image="otherkey.png";
+	img_image="main (1).png";
 	add();
 }
