@@ -12,6 +12,7 @@ img_x = 100;
 img_y = 100;
 
 function add() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);	//	Limpia el canvas
 	img_imgTag = new Image(); //define una variable para una imagen nueva
 	img_imgTag.onload = uploadimg; // establece una función para cargar la variable
 	img_imgTag.src = img_image;   // carga la imagen
